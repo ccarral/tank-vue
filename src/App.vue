@@ -1,10 +1,9 @@
 <script setup>
-import GridLayout from './views/GridLayout.vue'
+import GridLayout from "./views/GridLayout.vue";
 </script>
 
 <template>
-      <GridLayout/>
+  <GridLayout />
 </template>
 
-<style>
-</style>
+<style></style>
