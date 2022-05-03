@@ -7,8 +7,15 @@
       @focusout="editable = false"
     ></textarea>
     <table v-if="!editable" @click="editable = true" class="editor editor-size">
-      <tr v-for="(line, idx) in lines" :key="idx" class="editor-line"
-      :class="{'error-line':errorArray[idx]}">
+      <tr
+        v-for="(line, idx) in lines"
+        :key="idx"
+        class="editor-line"
+        :class="{
+          'error-line': errorArray[idx],
+          'current-step-line': idx == currentStepLine,
+        }"
+      >
         {{
           line
         }}
@@ -18,7 +25,7 @@
 </template>
 <script>
 export default {
-  props: { errorLines: Array },
+  props: { errorLines: Array, currentStepLine: Number },
   data() {
     return {
       code: "avanza;\ngira derecha\nvar x = radar;",
@@ -51,14 +58,17 @@ export default {
 .editor-size {
   resize: none;
 }
-.editor-table{
+.editor-table {
 }
-.editor-container{
-  text-align:left;
+.editor-container {
+  text-align: left;
   width: 80%;
   height: 100%;
 }
-.error-line{
-    background-color: #ff5959;
+.error-line {
+  background-color: #ff5959;
+}
+.current-step-line {
+  background-color: #90ff7d;
 }
 </style>

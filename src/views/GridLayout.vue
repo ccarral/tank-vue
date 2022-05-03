@@ -1,10 +1,15 @@
 <script setup>
-import TextEditor from "../components/TextEditor.vue"
+import TextEditor from "../components/TextEditor.vue";
 </script>
 <template>
   <div class="grid-wrapper">
-    <div class="editor editor-1"><TextEditor textareaid="editor-1"
-    :errorLines = "[1]"/></div>
+    <div class="editor editor-1">
+      <TextEditor
+        textareaid="editor-1"
+        :errorLines="[1]"
+        :currentStepLine="0"
+      />
+    </div>
     <div class="editor editor-2">editor-2</div>
     <div class="maingrid"></div>
     <div class="editor editor-3">editor-3</div>
@@ -24,12 +29,12 @@ import TextEditor from "../components/TextEditor.vue"
   gap: 5px;
 }
 
-div.editor > textarea{
-width: 95%;
-height:95%;
+div.editor > textarea {
+  width: 95%;
+  height: 95%;
 }
-div.editor{
-text-align: center;
+div.editor {
+  text-align: center;
 }
 
 .editor-1 {
