@@ -1,35 +1,30 @@
 # tanques-vue
 
-This template should help get you started developing with Vue 3 in Vite.
+Juego didactico simple, enfocado en enseñar los fundamentos de
+programación, utilizando un lenguaje simple interpretado en el navegador,
+gracias a rust y WASM.
 
-## Recommended IDE Setup
+## Ejemplo
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+```
+// Este programa dibuja un rectángulo
+// en el tablero
+mientras(1 == 1){ // Ciclo infinito
+  avanza; avanza;
+  gira derecha;
+  var x = 10;
+  mientras(x != 0){
+    avanza;
+    x = x-1;
+  }
+  gira derecha;
+}
 ```
 
-### Compile and Hot-Reload for Development
+## Capturas de pantalla
+![Captura de pantalla](./public/screenshot.png)
 
+## Desarrollo
 ```sh
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```
